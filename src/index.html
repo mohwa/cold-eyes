@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-title">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="description">
+
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let o = {
+		x: 1
+	};
+
+	let o1 = {
+		x: [
+			{xx: 1},
+			{xx: 2},
+			{xx: 3},
+			{xx: 4}
+		]
+	};
+
+	let o2 = {
+		x: [
+			{x: 1},
+			{x: 2},
+			{x: 3},
+			{x: 4}
+		]
+	};
+
+//	const watcher1 = new ColdEyes(o);
+	const watcher2 = new ColdEyes(o1);
+//	const watcher3 = new ColdEyes(o2);
+
+//    watcher1.watch('x', function(...args){
+//        console.log(arguments);
+//    });
+
+    watcher2.watch('x', function(...args){
+        console.log(arguments);
+    });
+
+//    watcher3.watch('x', function(...args){
+//        console.log(this, arguments);
+//    });
+
+//	o.x = 2;
+//	o1.x.push({xx: 5}, {xx: 51});
+//	o1.x.push({xx: 6});
+//	o1.x.push({xx: 7});
+//	o1.x.push({xx: 888});
+
+	o1.x.shift();
+//	o1.x.pop();
+//
+//	o1.x[0] = 111;
+//	o1.x[6] = 333;
+//	o1.x[7] = 8888888;
+//	o1.x[8] = 9999999999;
+
+//	console.log(o1.x);
+//	console.log(o);
+//	console.log(o1.push === o2.push);
+</script>
+</body>
+</html>
